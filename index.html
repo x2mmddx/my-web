@@ -1,84 +1,117 @@
 <!DOCTYPE html>
-<html>
-    <head >
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Image Popup</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="style.css">
-        <div class="box">
-            <li class="box1"><a id="box1"href="#frame-box">Home</a></li>
-            <li class="box2"><a id="box2"href="#frame-box3">Contact us</a></li>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahmoud Aziz | Portfolio</title>
+  <link class="logo" rel="icon" href="src/logo2.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar transparent" id="navbar">
+    <div class="logo"><img src="src/logo2.png" alt="Mahmoud Logo" class="logo-img" height="50px" width="50px">
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+      
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <h3>Hi, I'm</h3>
+      <h1><span id="typing"></span></h1>
+      <h2>Microbiologist / Future Andrologist</h2>
+      <div class="socials">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="src/mahmoud.png" alt="Mahmoud Aziz">
+      
+    </div>
+    
+  </section>
+
+  <!-- About -->
+  <section class="about hidden" id="about">
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>About Me</h2>
+      <p>
+        My name is Mahmoud Alaa Eldin Aziz, a 21-year-old graduate of the Faculty of Science, Zagazig University, with a specialization in Microbiology.</p> <p>From an early age, I developed a deep fascination with the sciences and a strong aspiration to pursue a medical career. </p><p>Over the years, this passion has evolved into a clear professional goal: to specialize in andrology and medical analysis.</p> <p>I am committed to continuous learning, practical training, and research, striving to bridge theoretical knowledge with hands-on expertise in order to contribute meaningfully to the advancement of healthcare and reproductive medicine.
+      </p>
+    
+  </section>
+
+  <!-- Experience -->
+  <section class="experience hidden" id="experience">
+    <hr>
+    <br>
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <h3>Andrologist - Al Moselhi Hospital (Sep 2025 - Oct 2025)</h3>
+          <p>- Experienced in microscopic examinations, sample preparation, and advanced reproductive techniques (IVF & ICSI).</p>
+<p>- Contributed to fertility treatments through sperm isolation and teamwork at Al Moselhi Hospital.</p>
         </div>
-    </head>
-    <body>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h3>Medical Analyst - (IMC) (Aug 2025 - Sep 2025)</h3>
+          <p>- Integrated Laboratory Expertise: Gained comprehensive experience in essential hospital lab units, including Hematology, Clinical Chemistry, Immunology & Hormones, and Blood Bank, strengthening my skills in medical sample analysis.</p>
+<p>- Lab Operations Management and Quality Control: Developed skills in managing pre- and post-analytical processes, controlling analytical quality, and interpreting arterial blood gas, ensuring accuracy and reliability in lab results.</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h3>Researcher - NRC (Jul 2025 - Sep 2025)</h3>
+          <p>- DNA Sequencing and Analysis: Analyzed DNA samples using gel electrophoresis and sequencing, and designed probes to improve test accuracy.</p>
+          <p>- Molecular Biology: Contributed to research on genetic diseases at the National Research Centre in Egypt.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <h3>QA/QC - Mepaco-Medifood (Aug 2025)</h3>
+          <p>- Gained solid experience in microbiology along with strong knowledge of drug production processes, machinery operations, and quality standards.</p>
+<p>- Enhanced efficiency by fostering collaboration between production and quality assurance teams.</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <h3>Medical Analyst - Al Salam Lab (Jun 2023 - Jul 2023)</h3>
+          <p>- Clinical Sample Analysis: Conducted high-quality analysis of medical samples, specializing in hematology, to ensure accurate and reliable results.</p>
+          <p>- Patient Care and Documentation: Performed sample collection while adhering to best practices in patient care, and developed strong skills in clear and precise medical report writing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="popup">
-                <!-- top bar -->
-                <div class="top-bar">
-                    <p class="image-name">img1.png</p>
-                    <span class="close-btn"></span>
-                </div>
-                <!-- arrows -->
-                <button class="arrow-btn left-arrow"><img src="arrow.png" alt=""></button>
-                <button class="arrow-btn right-arrow"><img src="arrow.png" alt=""></button>
-                <!-- image -->
-                <img src="certificate 1.png" class="large-image" alt="certificate 1">
-                <!-- image-index -->
-                <h1 class="index">01</h1>
-            </div>
-            <div class="frame-box" id="frame-box">
-            <p class="frame-info">
-                <h2>Personal information</h2> <!--عنوان رئيسي-->
-                <img class="me" src="https://scontent.faly8-2.fna.fbcdn.net/v/t39.30808-6/438086138_2245887158947922_5544259196909247315_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Htx-TvVW_nAQ7kNvgGRmAzH&_nc_ht=scontent.faly8-2.fna&oh=00_AYDr4oD2mDshgtQVinB5mco8MfNqRH-TLZ1_RMIs-NlUnA&oe=66AB32AE" height="200" width="200">
-                <br><br><b>Name: </b>Mahmoud Alaa Eldin Aziz Muhammed
-                <br><b>Education: </b>Faculty of Science
-                <br><b>Departement: </b>Microbiology
-                <br><b>Academic year: </b> 3rd year
-                <br><b>Age: </b>20
-            
-            </p>
-            </div>
-            <div class="frame-box2">
-            <p class="frame-info2">
-            <h2 id="titles">Experiments</h2> <!--عنوان رئيسي-->
-                <br><b>حاصل على شهادة في دورة التحاليل الطبية
-                    <br>python حاصل على شهادة في دورة
-                    <br>html حاصل على شهادة في دورة
-                    <br>css حاصل على شهادة في دورة 
-                    <br><br>
-                    
-                    <!----><div class="gallery-image">
-                            <img class="image" src="certificate 1.png" height="114" width="114" alt="certificate 1">
-                            <img class="image" src="certificate 2.png" height="114" width="114" alt="certificate 2">
-                            <img class="image" src="certificate 3.png" height="114" width="114" alt="certificate 3">
-                    <script src="script.js"></script>
-                    </div>
-                </b>
-                
-                <hr> <!-- خط خفيف -->
-                <h2>Goals</h2> <!--عنوان فرعي-->
-                <h4>Main Job</h4>
-                <b>العمل في مجال التحاليل ( اخصائي تحاليل طبية )
-                    <br>العمل في مجال طبي ( مراقب جودة )
-                    <br>العمل في مجال الادوية ( تصنيع الادوية )
-                    <h4>Freelance</h4>
-                    العمل في مجال التكنولوجيا ( برمجة المواقع والتطبيقات )<br>
-                    كتابة ابحاث ومقالات
+  <!-- Contact -->
+  <section class="contact hidden" id="contact">
+    <h2>Contact Me</h2>
+    <a href="https://mail.google.com/mail/u/1/#sent?compose=VpCqJPsfxFtrddJNVTxSmCFcZxPrgDpWCPDVdBPrzdZDPJlGlXLHCXDVqmSzlCslWXqskBQ" target="_blank"> Email</a>
+    <a href="https://www.linkedin.com/in/mahmoud-alaa-924117383/" target="_blank">LinkedIn</a>
+    <a href="https://www.facebook.com/xx2mmdd" target="_blank">Facebook</a>
+  </section>
 
-                
-                </b>
-            </p> 
-            </div>
-            <div class="frame-box3" id="frame-box3">
-                <h2 class="frame-info3">Contact me<h2>
-                <a href="https://www.facebook.com/xx2mmdd" class="fa fa-facebook" target="_blank"></a> <a class="fa fa-whatsapp my-whatsApp"href="https://wa.me//+201011676950" class="whatsApp" target="_blank"></a> <a class="fa fa-google" href="https://mail.google.com/mail/u/0/#inbox?compose=SxfkdnRKmGrgqtBHNnLKwFsFpPCcVcjghCMSHBRrvHgrPZGJVnsZpjkQcbprbBCCKdStGfKqqMpFBbXQLfvScpTQpSDSCGkgjLMgbDfBcSmhgqXwKvq"></a>
-            </div>
-            <div class="quran">
-            <audio controls autoplay id="quran">
-                <source src="67 الملك.mp3" type="audio/mp3">
-            </audio>
-            </div>
-
-    </body>
+  <script src="script.js"></script>
+</body>
 </html>
