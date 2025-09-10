@@ -1,44 +1,66 @@
-const images = [...document.querySelectorAll('.image')];
-
-// popup
-
-const popup = document.querySelector('.popup');
-const closeBtn = document.querySelector('.close-btn');
-const imageName = document.querySelector('.image-name');
-const largeImage = document.querySelector('.large-image');
-const imageIndex = document.querySelector('.index');
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
-
-let index = 0; // will track our current image;
-
-images.forEach((item, i) => {
-    item.addEventListener('click', () => {
-        updateImage(i);
-        popup.classList.toggle('active');
-    })
-})
-
-const updateImage = (i) => {
-    let path = `certificate ${i+1}.png`;
-    largeImage.src = path;
-    imageName.innerHTML = path;
-    imageIndex.innerHTML = `0${i+1}`;
-    index = i;
+// ===== Typing Effect =====
+const text = "Mahmoud Alaa Eldin Aziz";
+let i = 0;
+function typingEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typingEffect, 120);
+  }
 }
+typingEffect();
 
-closeBtn.addEventListener('click', () => {
-    popup.classList.toggle('active');
-})
 
-leftArrow.addEventListener('click', () => {
-    if(index > 0){
-        updateImage(index - 1);
+
+// ===== Scroll Animation =====
+const hiddenElements = document.querySelectorAll(".hidden");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
     }
-})
+  });
+});
+hiddenElements.forEach((el) => observer.observe(el));
 
-rightArrow.addEventListener('click', () => {
-    if(index < images.length - 1){
-        updateImage(index + 1);
-    }
-})
+// ===== Mobile Navbar Toggle =====
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+// ===== Navbar Transparency =====
+const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.remove("transparent");
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.add("transparent");
+    navbar.classList.remove("scrolled");
+  }
+});
+
+// عند أول تحميل الصفحة تبقى شفافة
+navbar.classList.add("transparent");
+
+// ===== Smooth Scroll (زيادة تحكم) =====
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+  anchor.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetId = anchor.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetId);
+    const offset = navbar.offsetHeight; // عشان ما يغطيش الجزء العلوي
+    const targetPosition = targetSection.offsetTop - offset + 10;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth"
+    });
+
+    // قفل المنيو في الموبايل بعد الضغط
+    navLinks.classList.remove("active");
+  });
+});
